@@ -40,10 +40,20 @@ function canvasDraw(interval){
 
         if(score.score >= 5){
             ctx.fillText("You Win", canvas.width / 2, canvas.height / 2);
+            score.score = 0
         }
         else if(score.enemyScore >= 5){
             ctx.fillText("You Lose. Better Luck next time", canvas.width / 2, canvas.height / 2);
         }
+
+        score.score = 0
+        score.enemyScore = 0
+
+
+        ball.x = canvas.width / 2
+        ball.y = canvas.height / 2
+        ball.xChange = 1
+        ball.yChange = 1
     }
 }
 
